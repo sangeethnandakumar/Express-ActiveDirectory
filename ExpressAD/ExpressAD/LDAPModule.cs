@@ -10,7 +10,7 @@ namespace ExpressAD
     {
 
         //Read Active Directory Configuration from appsettings
-        public static DirectoryCofig ReadDirectoryConfig(string username = "")
+        private static DirectoryCofig ReadDirectoryConfig(string username = "")
         {
             /* NOTE: Change this code to retrive config data from appsettings.json */
             var LDAPServer = "ActiveDirectory:LDAPServer";
@@ -35,6 +35,9 @@ namespace ExpressAD
                 UserGroup = UserGroupName
             };
         }
+
+
+
 
         //This function will return UserPricipal of current user. Return NULL means can't find user from ActiveDirectory.
         //Username of current user is obtained from HttpContext
